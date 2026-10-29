@@ -10,7 +10,7 @@ jobs:
                     tinytex: True
               - run: pin install ipykernel nbclient matplotlib PyMPDATA 
               - run: quarto render MUP1.ipynb --to pdf --execute 
-              - uses: actions/upload_artifect@v7
+              - uses: actions/upload_artifact@v7
                 with:
                   path: MUP1.pdf
                 
