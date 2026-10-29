@@ -1,0 +1,18 @@
+name: foo
+on: push
+jobs:
+    witam:
+          runs-on: ubuntu-latest
+          steps: 
+              - uses: actions/checkout@v7
+              - uses: quarto-dev/quarto-actions/setup@v2
+                with:
+                    tinytex: True
+              - run: pin install ipykernel nbclient matplotlib PyMPDATA 
+              - run: quarto render MUP1.ipynb --to pdf --execute 
+              - uses: actions/upload-artifect@v7
+                with:
+                  path: MUP1.pdf
+                
+
+                  
