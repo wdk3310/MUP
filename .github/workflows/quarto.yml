@@ -2,7 +2,7 @@ name: foo
 on: push
 jobs:
     witam:
-          runs-on: windows-latest
+          runs-on: ubuntu-latest
           steps: 
               - uses: actions/checkout@v7
               - uses: quarto-dev/quarto-actions/setup@v2
